@@ -18,11 +18,6 @@ module.exports = {
     "no-var": "error", // Disallow the use of var, use let or const instead
     semi: ["error", "always"], // Enforce semicolons at the end of statements
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-
-    "no-multi-spaces": "error", // Disallow multiple spaces
-    "space-in-parens": ["error", "never"], // Disallow spaces inside parentheses
-    "no-multiple-empty-lines": ["error", { max: 1 }], // Disallow multiple empty lines (max 1 empty line)
-    "prefer-const": "error", // Prefer the use of const for variables that are never reassigned
+    "simple-import-sort/exports": "error"
   },
 };
