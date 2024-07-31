@@ -9,8 +9,12 @@ export default class SampleJob implements Ijob {
     this.payload = payload;
     this.name = this.constructor.name;
   }
-  handle = () => {
+  handle = (job?: Job) => {
     console.log("Insode Job handle");
+    if (job) {
+      console.log(job.data, job.name, job.id);
+      console.log(this.payload);
+    }
   };
   failed = (job?: Job) => {
     console.log("Insode Failed Job ");
