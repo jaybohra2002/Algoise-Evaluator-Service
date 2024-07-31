@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src/**/*.ts --fix",
+    "prebuild": "npm run lint",
     "build": "npx tsc",
     "watch": "npx tsc -w",
     "prestart": "npm run build",
@@ -15,6 +17,14 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "install": "^0.13.0",
+    "npm": "^10.8.2",
     "typescript": "^5.5.4"
   },
   "dependencies": {
