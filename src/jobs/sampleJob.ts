@@ -13,7 +13,7 @@ export default class SampleJob implements Ijob {
     console.log("Insode Job handle");
     if (job) {
       console.log(job.data, job.name, job.id);
-      console.log(this.payload);
+      console.log("Payload is : ", this.payload);
     }
   };
   failed = (job?: Job) => {
