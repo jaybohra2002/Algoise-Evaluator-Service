@@ -3,7 +3,7 @@ import express, { Express } from "express";
 
 //import bullBoardAdapter from "./config/bullBoardConfig";
 import serverConfig from "./config/serverConfig";
-import runPython from "./containers/pythonContainer";
+import runCpp from "./containers/cppContainer";
 import apiRouter from "./routes";
 import SampleWorker from "./workers/sampleWorker";
 
@@ -19,10 +19,29 @@ app.listen(serverConfig.PORT, () => {
     `BullBoard DashBoard Running on http//localhost:${serverConfig.PORT}/ui`,
   );
   SampleWorker("Sample Queue");
+  const userCode = `class Solution {
+    public:
+    string permute (){
+        string s="Jay C Bohra";
+        return s;
+    }
+};`;
   const code = `
-x = int(input())
-for i in range(x):
-    print(i)
+#include <iostream>
+#include <string>
+using namespace std;
+${userCode}
+int main(){
+  Solution obj;
+  string res=obj.permute();
+  cout<<res<<" ";
+  cout<<endl;
+  for (int i=0;i<res.size();i++){
+  cout<<res[i]<<" ";
+  }
+    return 0;
+}
 `;
-  runPython(code, "100");
+  const inputCase = `10`;
+  runCpp(code, inputCase);
 });
