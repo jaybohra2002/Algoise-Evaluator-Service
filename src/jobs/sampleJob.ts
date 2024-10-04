@@ -1,8 +1,8 @@
 import { Job } from "bullmq";
 
-import { Ijob } from "../types/bullMqJobDefinition";
+import { IJob } from "../types/bullMqJobDefinition";
 
-export default class SampleJob implements Ijob {
+export default class SampleJob implements IJob {
   payload: Record<string, unknown>;
   name: string;
   constructor(payload: Record<string, unknown>) {

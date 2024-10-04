@@ -1,5 +1,5 @@
 import { Job } from "bullmq";
-export interface Ijob {
+export interface IJob {
   name: string;
   payload?: Record<string, unknown>;
   handle: (job?: Job) => void;
