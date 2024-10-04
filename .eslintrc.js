@@ -16,7 +16,7 @@ module.exports = {
   "plugins": ["simple-import-sort"],
   rules: {
     "no-var": "error", // Disallow the use of var, use let or const instead
-    semi: ["error", "always"], // Enforce semicolons at the end of statements
+    //semi: ["error", "always"], // Enforce semicolons at the end of statements
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   },

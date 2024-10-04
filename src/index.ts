@@ -3,7 +3,7 @@ import express, { Express } from "express";
 
 import bullBoardAdapter from "./config/bullBoardConfig";
 import serverConfig from "./config/serverConfig";
-import runCpp from "./containers/cppContainer";
+import runCpp from "./containers/cppExecutor";
 import submissionQueueProducer from "./producers/submissionQueueProducer";
 import apiRouter from "./routes";
 import { submission_queue } from "./utils/constants";
