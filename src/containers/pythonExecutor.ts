@@ -10,8 +10,10 @@ class PythonExecutor implements CodeExecutorStrategy {
   async execute(
     code: string,
     inputTestCase: string,
+    outputTestCase:string
   ): Promise<ExecutionResponse> {
     // Correct signature
+    console.log(outputTestCase);
     const rawLogBuffer: Buffer[] = [];
     console.log("Initialising a new Python docker container");
     await pullImage(PYTHON_IMG);
