@@ -9,7 +9,9 @@ class CppExecutor implements CodeExecutorStrategy {
   async execute(
     code: string,
     inputTestCase: string,
+    outputTestCase:string
   ): Promise<ExecutionResponse> {
+    console.log(outputTestCase);
     const rawLogBuffer: Buffer[] = [];
     console.log("Initialising a new CPP docker container");
     await pullImage(CPP_IMG);
